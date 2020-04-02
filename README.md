@@ -1,2 +1,0 @@
-# 2shuyuan
-learning

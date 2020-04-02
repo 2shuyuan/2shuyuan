@@ -1,0 +1,20 @@
+import zmail
+subjiec = "测试zmail发送邮件"
+content = "这是通过zmail发送来的邮件"
+mail = {
+    'subject':subjiec,
+    'content_text':content,
+ }
+#发送者邮箱
+#发送者的邮箱
+sender = '1xxxxxxx5@qq.com'
+#发送者的邮箱授权码
+sender_password = 'wxxxxxxxgd'
+server = zmail.server(sender,sender_password)
+
+#接收者邮箱
+receiver = '1xxxxxxxxxxx3@qq.com'
+#开始发送邮件
+server.send_mail(receiver,mail)
+
+print('发送成功！')
