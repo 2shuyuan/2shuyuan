@@ -1,0 +1,14 @@
+import zmail
+bt = '测试zmail发邮件'
+content = "通过zmail发邮件"
+mail= {
+    'subject': bt,
+    'content_text': content,
+    'attachments': r'F:\py\asdf\ecxel\2.xlsx'
+}
+sender = 'xxxx@163.com'
+sender_password = 'xxxx'
+server = zmail.server(sender,sender_password)
+receiver = '2shuyuan@163.com'
+server.send_mail(receiver,mail)
+print("发送成功")
