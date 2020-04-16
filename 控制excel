@@ -1,0 +1,20 @@
+import openpyxl
+from shijian import datetime
+wb = openpyxl.load_workbook(r'F:\py\asdf\ecxel\编号.xlsx') 
+b2 = openpyxl.load_workbook(r'F:\py\asdf\ecxel\检验.xlsx')
+sheet = wb.get_sheet_by_name('Sheet1')
+sheet2 = b2.get_sheet_by_name('Sheet1')
+a = sheet['C1'].value
+for i in sheet['A']:
+    for j in sheet2['B']:
+        if i.value == j.value:
+            print(j.row)
+            print(j.column)
+            sheet2.cell(row=j.row, column=4).value = a
+        else:
+            row =['', i.value, '', a, a, 'pass']
+            sheet2.append(row)
+    else:
+        i.value == 1
+        break
+
