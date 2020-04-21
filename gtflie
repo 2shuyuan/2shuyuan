@@ -1,0 +1,15 @@
+import os
+
+
+def gtlsb():
+    dirs = os.listdir(r"F:\py\asdf\ecxel")
+    lsb = []
+    for dir in dirs:
+        indx = dir.rfind('.')
+        dir = dir[:indx]
+        lsb.append(dir)
+    return lsb
+
+
+if __name__ == "__main__":
+    print(gtlsb())
