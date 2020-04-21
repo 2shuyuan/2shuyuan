@@ -1,0 +1,17 @@
+from gtfile import gtlsb
+from gtlt import gtlsa
+
+
+def fdfile(a, b):
+    sa = set(a)
+    sb = set(b)
+    sc = (sa & sb)
+    sd = (sc ^ sa)
+    print(str(sc) + "这些有了")
+    print(str(sd) + "缺少")
+
+
+if __name__ == '__main__':
+    a = gtlsa()
+    b = gtlsb()
+    fdfile(a, b)
