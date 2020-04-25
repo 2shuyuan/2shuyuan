@@ -1,0 +1,20 @@
+'''找到元素的下标，返回元素所在行,放在ce中返回'''
+
+import pandas as pd
+import gtlt
+name = gtlt.gtlsa()
+l = len(name)
+print(l)
+
+
+
+def finddata():
+    ce = []
+    df = pd.read_excel(r'F:\py\asdf\ecxel\编号.xlsx')  ##文件路径
+    for i in range(1,l):
+        print(i)
+
+        a = df[df['编号'].isin([name[i]])].index.tolist()
+        ce.append(a[0]+1)
+    return ce
+finddata()
